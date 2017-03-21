@@ -60,7 +60,7 @@ body{
     line-height: 24px;
 }
 
-@media(min-width:600px){
+@media(min-width:580px){
     .banner > h2{display:none;}
     .banner .banner_one{display:inline-block;width: 376px;}
     .banner p{max-width: 536px;}
