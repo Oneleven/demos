@@ -103,10 +103,10 @@ body{
   box-shadow:0 15px 40px #ebece2 inset;
 }
 
-.clock > .pointer div{
+/*.clock > .pointer div{
   transition:all 0.5s;
   transition-timing-function:cubic-bezier(0.1,2.5,0.58,1);
-}
+}*/
 
 .clock > .pointer > .shadow{
    filter:drop-shadow(4px 4px 2px #888888)
