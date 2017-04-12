@@ -1,6 +1,6 @@
 body{
-  margin:0; /*  body标签自身有margin */
-  height:100vh; /* 不给高度无法垂直方向居中 */
+  margin:0; 
+  height:100vh; 
   display:flex;
   justify-content:center;
   align-items:center;
@@ -49,8 +49,8 @@ body{
 /* 表盘数字 */
 
 .clock{
-  width:220px;
-  height:220px;
+  min-width:220px;
+  min-height:220px;
   background:#F0F1E9;
   border:1px solid transparent;
   border-radius:50%;
@@ -160,3 +160,20 @@ body{
   box-shadow:0 -2px 4px #242323 inset;
 }
 
+/* 底部信息 */
+
+.information{
+  position:relative;
+}
+
+.information > .ui{
+  margin:0;
+  position:absolute;
+  white-space: pre;
+  font-family: monospace;
+  font-size: 14px;
+  top:210px;
+  left:-63px;
+  text-shadow:1px 3px 3px #898582;
+  color:#3C3C3C
+}
