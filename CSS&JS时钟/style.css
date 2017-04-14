@@ -33,6 +33,7 @@ body{
   width:115px;
   height:3px;
   transform:rotate(-60deg);
+  box-shadow: 0 1px 1px #d6cdcb inset;
 }
 
 .outside > .rope_right{
@@ -43,6 +44,7 @@ body{
   width:115px;
   height:3px;
   transform:rotate(60deg);
+  box-shadow: 0 1px 1px #d6cdcb inset;
 }
 
 
@@ -59,6 +61,16 @@ body{
   
 }
 
+.clock::before{
+  position:absolute;
+  left:-1px;
+  top:-1px;
+  width:222px;
+  height:222px;
+  border-radius:50%;
+  content:'';
+  box-shadow:0 -3px 5px #c1b8b6 inset;
+}
 
 .clock > .number{
   font-size:25px;
