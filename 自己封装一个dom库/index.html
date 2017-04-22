@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>dom库</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<ul>
+  <li class="error">1</li>
+  <li class="error">2</li>
+  <li class="error">3</li>
+  <li class="error">4</li>
+</ul>
+</body>
+
+<script src="./main.js"></script>
+
+<script>
+//let items = $('li')
+
+ console.assert(typeof $ === 'function')
+ var items = $('li')
+ console.log(items)
+
+//items.on
+
+ items.on('click',function(){
+     console.log('click')
+ })
+
+// items.addClass & items.removeClass
+
+ console.assert(items.addClass('hi') === items)
+
+ items.addClass('hi').removeClass('error')
+
+// items.text('') & items.text()
+
+ items.text('hello')
+ console.log(items.text()) //jquery库里面返回的是第一个值，在这里返回的是一个数组
+
+//items.get(2)
+
+ var item = items.get(2) 
+ console.log(item)
+
+//item.siblings
+ 
+ var _item = $(item)  //item返回的是一个元素，需要将item放入构造的array中才能构造新的api
+ console.assert(_item.on !== undefined)
+ console.assert(typeof _item.on === 'function')
+ console.log(_item.siblings())
+
+ console.assert(_item.siblings().end() === _item)
+ _item.siblings().addClass('bye').end().addClass('bye_1')
+
+ 
+</script>
+</html> 
