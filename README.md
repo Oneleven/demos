@@ -7,6 +7,8 @@
 
 3. [CSS & JS时钟](https://oneleven.github.io/products/CSS&JS时钟/index.html)
 
+4. [轮播组件](https://oneleven.github.io/products/轮播组件/index.html)
+
    ​
 
 
