@@ -43,7 +43,7 @@ p,h1,h3,h4,a{color:#353535}
   min-width:500px;
   justify-content:space-around;
   align-items:center;
-  font-size:1em;
+  font-size:13px;
 }
 
 
@@ -87,12 +87,12 @@ p,h1,h3,h4,a{color:#353535}
 }
 
 .banner > .swiper-container .swiper-slide >p strong{
-  font-size:3em;
+  font-size:3rem;
   color:white;
 }
 
 .banner > .swiper-container .swiper-slide >p span{
-  font-size:1em;
+  font-size:13px;
   color:white;
   display:block;
   margin-top:12px;
@@ -105,7 +105,7 @@ p,h1,h3,h4,a{color:#353535}
   left:18%;
   border-radius:6px;
   padding:10px 20px;
-  font-size:1em;
+  font-size:15px;
 }
 
 /*abstract*/
@@ -122,17 +122,17 @@ p,h1,h3,h4,a{color:#353535}
   display:flex;
   justify-content:space-around;
   align-items:center;
-  margin:5em auto;
+  margin:5rem auto;
   max-width:900px;
 }
  .abstract >.left> p{
-   font-size:0.9em;
+   font-size:15px;
    color:#E9BC72;
    margin-bottom:10px;
  }
 
 .abstract >.right> p{
-  font-size:1em;
+  font-size:15px;
 }
 
 /*page2*/
@@ -168,7 +168,7 @@ p,h1,h3,h4,a{color:#353535}
 }
 
 .introduction_1 >.block p{
-  font-size:1em;
+  font-size:15px;
 }
 
 .introduction_1 >.block strong{
@@ -191,7 +191,7 @@ p,h1,h3,h4,a{color:#353535}
 }
 .introduction_2 > .block_top p:nth-child(1){
   color:#E9BC72;
-  font-size:0.9em;
+  font-size:15px;
 }
 
 .introduction_2 > .block_top h3{
@@ -199,7 +199,7 @@ p,h1,h3,h4,a{color:#353535}
 }
 
 .introduction_2 > .block_top p:nth-child(3){
-  font-size:1em;
+  font-size:15px;
   padding-bottom:15px;
 }
 .introduction_2>.block_bottom{
@@ -220,12 +220,12 @@ p,h1,h3,h4,a{color:#353535}
 
 .introduction_2>.block_bottom .block_right1 div p:nth-child(1){
   color:#E9BC72;
-  font-size:0.9em;
+  font-size:15px;
   padding:15px 0 5px 0;
 }
 
 .introduction_2>.block_bottom .block_right1 div p:nth-child(3){
-  font-size:1em;
+  font-size:15px;
   padding:5px 0 15px 0;
 }
 
@@ -259,13 +259,13 @@ p,h1,h3,h4,a{color:#353535}
 
 .album >.album_slide >.swiper-container swiper-slide{
   text-align: center;
-  font-size: 1em;
+  font-size: 15px;
   background: #fff;
 }
 
 .album >.album_top p:nth-child(1){
   color:#E9BC72;
-  font-size:0.9em;
+  font-size:15px;
   padding-top:30px;
 }
 
@@ -275,7 +275,7 @@ p,h1,h3,h4,a{color:#353535}
 }
 
 .album >.album_top p:nth-child(3){
-  font-size:1em;
+  font-size:15px;
   padding-bottom:30px;
   color:white;
 }
