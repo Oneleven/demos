@@ -318,8 +318,13 @@
   color:#E9BC72;
 }
 
+.footer_wrapper >.footer>.footer_left li{
+  display:flex;
+}
+
 .footer_wrapper >.footer>.footer_left li span{
   padding-left:10px;
+  line-height: 1.7em;
 }
 
 .footer_wrapper >.footer>.footer_left img{
