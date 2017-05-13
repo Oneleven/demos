@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/clock_style.css">
 </head>
 
 <body>
@@ -20,12 +21,12 @@
         </div>
         <div class="topbar_right">
             <nav class="navigation">
-                <a href="#">HOME</a>
-                <a href="#">PAGES</a>
-                <a href="#">PROTFOLIO</a>
-                <a href="#">BLOG</a>
-                <a href="#">SHOP</a>
-                <a href="#">CONTACT</a>
+                <a href="#home">HOME</a>
+                <a href="#home">PAGES</a>
+                <a href="#home">PROTFOLIO</a>
+                <a href="#home">BLOG</a>
+                <a href="#album">PRODUCTS</a>
+                <a href="#contact">CONTACT</a>
             </nav>
             <div class="search">
                 <img src="./img/search.png" alt="search">
@@ -33,26 +34,26 @@
         </div>
     </div>
     <!-- banner slide -->
-    <div class="banner">
+    <div class="banner" id="home">
         <div class="swiper-container demo" id="demo15">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <p><strong>Beautiful content <br>in great theme</strong> <br> <span>Donec euismod sem ac urna finibus , sit amet efficitur erat tempust dapibus <br> dictum turpis , vel faucibus erat posuere vitae . Sed elit eros</span>
                     </p>
-                    <div><span>LEARN MORE</span></div>
-                    <img src="http://placehold.it/1100x500" alt="">
+                    <div><a href="#LearnMore">LEARN MORE</a></div>
+                    <img src="./img/page1.jpg" alt="page1">
                 </div>
                 <div class="swiper-slide">
                     <p><strong>Beautiful content <br>in great theme</strong> <br> <span>Donec euismod sem ac urna finibus , sit amet efficitur erat tempust dapibus <br> dictum turpis , vel faucibus erat posuere vitae . Sed elit eros</span>
                     </p>
-                    <div><span>LEARN MORE</span></div>
-                    <img src="http://placehold.it/1100x500" alt="">
+                    <div><a href="#LearnMore">LEARN MORE</a></div>
+                    <img src="./img/page2.jpg" alt="page2">
                 </div>
                 <div class="swiper-slide">
                     <p><strong>Beautiful content <br>in great theme</strong> <br> <span>Donec euismod sem ac urna finibus , sit amet efficitur erat tempust dapibus <br> dictum turpis , vel faucibus erat posuere vitae . Sed elit eros</span>
                     </p>
-                    <div><span>LEARN MORE</span></div>
-                    <img src="http://placehold.it/1100x500" alt="">
+                    <div><a href="#LearnMore">LEARN MORE</a></div>
+                    <img src="./img/page3.jpg" alt="page3">
                 </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -61,7 +62,7 @@
         </div>
     </div>
     <!-- abstract -->
-    <div class="abstract_wrapper">
+    <div class="abstract_wrapper" id="LearnMore">
         <div class="abstract">
             <div class="left">
                 <p>WHO WE ARE</p>
@@ -83,7 +84,7 @@
     <!-- introduction_1 -->
     <div class="introduction_1wrapper">
         <div class="introduction_1">
-            <div class="block">
+            <div class="block active">
                 <h1>01</h1>
                 <img src="./img/branding.png" alt="branding">
                 <p><strong>Branding</strong><br>lorem ipsum dolor sit amet,<br>consectetuer adipie sed euismodtin <br> cidunt
@@ -113,10 +114,44 @@
             </div>
             <div class="block_bottom">
                 <div class="block_left">
-                    <img src="http://placehold.it/400x400" alt="">
+
+                    <!--插入自制时钟-->
+                    <!--<img src="http://placehold.it/400x400" alt="">-->
+                    <div class="clock_wrapper">
+
+                        <div class="clock_outside">
+                            <div class="rope_right"></div>
+                            <div class="rope_left"></div>
+                            <div class="dot2"></div>
+                        </div>
+
+                        <div class="clock_demo">
+
+                            <div class="inner_circle"></div>
+                            <div class="number">
+                                <div class="number12">12</div>
+                                <div class="number3">3</div>
+                                <div class="number6">6</div>
+                                <div class="number9">9</div>
+                            </div>
+                            <div class="pointer">
+                                <div class="shadow">
+                                    <div class="hour_hand"></div>
+                                    <div class="minute_hand"></div>
+                                    <div class="second_hand"></div>
+                                </div>
+                                <div class="dot1"></div>
+                            </div>
+                            <div class="clock_text">
+                                <h4>24/7 Support</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+
                 <div class="block_right">
-                    <div class="block_right1">
+                    <div class="block_right1 active_1">
                         <img src="./img/24support.png" alt="24support">
                         <div>
                             <p>FEATURE 01</p>
@@ -149,33 +184,33 @@
     </div>
     <!-- page3 -->
     <!-- album -->
-    <div class="album_wrapper">
+    <div class="album_wrapper" id="album">
         <div class="album">
             <div class="album_top">
                 <p>WE HAVE</p>
-                <h3>Showcase Our Best Works</h3>
+                <p>Showcase Our Best Works</p>
                 <p>Lorem ipsum dolor sit amet,consectetuer adipiscing elit,sed eusimod tincidunt</p>
             </div>
             <div class="album_slide">
                 <div class="swiper-container demo" id="demo5">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/300x200" alt="">
+                        <div class="swiper-slide img_wrapper">
+                            <img src="./img/img_1.jpg" alt="img_1">
                         </div>
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/300x200" alt="">
+                        <div class="swiper-slide img_wrapper">
+                            <img src="./img/img_2.jpg" alt="img_2">
                         </div>
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/300x200" alt="">
+                        <div class="swiper-slide img_wrapper">
+                            <img src="./img/img_3.jpg" alt="img_3">
                         </div>
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/300x200" alt="">
+                        <div class="swiper-slide img_wrapper">
+                            <img src="./img/img_4.jpg" alt="img_4">
                         </div>
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/300x200" alt="">
+                        <div class="swiper-slide img_wrapper">
+                            <img src="./img/img_5.jpg" alt="img_5">
                         </div>
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/300x200" alt="">
+                        <div class="swiper-slide img_wrapper">
+                            <img src="./img/img_6.jpg" alt="img_6">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -184,7 +219,7 @@
         </div>
     </div>
     <!--footer-->
-    <div class="footer_wrapper">
+    <div class="footer_wrapper" id="contact">
         <div class="footer">
             <div class="footer_left">
                 <ul>
@@ -205,14 +240,16 @@
                     </li>
                 </ul>
                 <div class="icons">
-                    <img src="./img/weibo.png" alt="weibo">
-                    <img src="./img/blog.png" alt="blog">
-                    <img src="./img/instagram.png" alt="instagram">
-                    <img src="./img/github.png" alt="github">
+                    <a href="http://www.weibo.com/1853938530/profile?topnav=1&wvr=6&is_all=1" target="_blank"><img src="./img/weibo.png" alt="weibo"></a>
+                    <a href="https://oneleven.github.io" target="_blank"><img src="./img/blog.png" alt="blog"></a>
+                    <a href="https://www.instagram.com/oneleven101/" target="_blank"><img src="./img/instagram.png" alt="instagram"></a>
+                    <a href="https://github.com/Oneleven" target="_blank"><img src="./img/github.png" alt="github"></a>
                 </div>
             </div>
             <ul class="footer_middle">
-                <li><h5>COMPANY</h5></li>
+                <li>
+                    <h5>COMPANY</h5>
+                </li>
                 <li><span>About us</span></li>
                 <li><span>Contact us</span></li>
                 <li><span>Supports</span></li>
@@ -220,20 +257,22 @@
                 <li><span>Privacy Policy</span></li>
             </ul>
             <ul class="footer_middle">
-                <li><h5>NEWS</h5></li>
+                <li>
+                    <h5>NEWS</h5>
+                </li>
                 <li><span>Daily inspiration</span></li>
                 <li><span>New design trends</span></li>
-                <li><span>New design trends</span></li>               
+                <li><span>New design trends</span></li>
             </ul>
             <div class="footer_right">
                 <h5>INSTAGRAM</h5>
                 <div class="pictures">
-                    <img src="http://placehold.it/60x60" alt="">
-                    <img src="http://placehold.it/60x60" alt="">
-                    <img src="http://placehold.it/60x60" alt="">
-                    <img src="http://placehold.it/60x60" alt="">
-                    <img src="http://placehold.it/60x60" alt="">
-                    <img src="http://placehold.it/60x60" alt="">
+                    <img src="./img/ins_1.jpg" alt="ins_1.jpg">
+                    <img src="./img/ins_2.jpg" alt="ins_2.jpg">
+                    <img src="./img/ins_3.jpg" alt="ins_3.jpg">
+                    <img src="./img/ins_4.jpg" alt="ins_4.jpg">
+                    <img src="./img/ins_5.jpg" alt="ins_5.jpg">
+                    <img src="./img/ins_6.jpg" alt="ins_6.jpg">
                 </div>
             </div>
         </div>
@@ -250,6 +289,7 @@
     <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="./js/swiper.jquery.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/clock_main.js"></script>
 </body>
 
 </html>

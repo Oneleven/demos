@@ -1,0 +1,185 @@
+
+.clock_wrapper{
+  margin:0; /*  body标签自身有margin */
+  height:97%; /* 不给高度无法垂直方向居中 */
+  width:97%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: radial-gradient(circle, #EEEFE7, #655e5d);
+  border-radius: 20px;
+}
+
+/* 表盘外部 */
+.clock_outside{
+  position:relative;
+ /*  border:1px solid;  */
+  filter:drop-shadow(0 8px 5px #343434);
+}
+
+.clock_outside > .dot2{
+  position:absolute;
+  background:#EEEFE7;
+  left:105px;
+  top:-180px;
+  width:13px;
+  height:13px;
+  border-radius:50%;
+  box-shadow:0 -1px 4px 2px #525252 inset;
+}
+
+.clock_outside > .rope_left{
+  position:absolute;
+  background:#EEEFE7;
+  left:22px;
+  top:-121px;
+  width:115px;
+  height:3px;
+  transform:rotate(-60deg);
+  box-shadow: 0 1px 1px #d6cdcb inset;
+}
+
+.clock_outside > .rope_right{
+  position:absolute;
+  background:#EEEFE7;
+  left:86px;
+  top:-120px;
+  width:115px;
+  height:3px;
+  transform:rotate(60deg);
+  box-shadow: 0 1px 1px #d6cdcb inset;
+}
+
+
+/* 表盘数字 */
+
+.clock_demo{
+  width:220px;
+  height:220px;
+  background:#F0F1E9;
+  border:1px solid transparent;
+  border-radius:50%;
+  position:relative;
+  box-shadow:0 15px 30px #545454;
+  
+}
+
+.clock_demo::before{
+  position:absolute;
+  left:-1px;
+  top:-1px;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  content:'';
+  box-shadow:0 -3px 5px #c1b8b6 inset;
+}
+
+.clock_demo > .number{
+  font-size:25px;
+  color:#999999;
+}
+
+.clock_demo .number12{
+  position:absolute;
+  top:3px;
+  left:96px;
+}
+
+.clock_demo .number3{
+  position:absolute;
+  right:9px;
+  top:93px;  
+}
+
+.clock_demo .number6{
+  position:absolute;
+  bottom:3px;
+  left:105px;
+}
+
+.clock_demo .number9{
+  position:absolute;
+  top:93px;
+  left:9px;
+}
+
+/* 表盘内部 */
+
+.clock_demo > .inner_circle{
+  width:140px;
+  height:140px;
+  border:1px solid transparent;
+  border-radius:50%;
+  position:absolute;
+  left:40px;
+  top:40px;
+  background:#F0F1E9;
+  box-shadow:0 15px 40px #ebece2 inset;
+}
+
+/*.clock .shadow div{
+  transition-timing-function:cubic-bezier(0.1,0.97,0.58,1);
+  transition:1s;
+}*/
+
+.clock_demo > .pointer > .shadow{
+   filter:drop-shadow(4px 4px 2px #888888)
+}
+
+.clock_demo > .pointer .hour_hand{
+  position:absolute;
+  top:65px;
+  left:105px;
+  width: 3px;
+  border-bottom: 60px solid #68645C;
+  border-right: 4px solid transparent;  
+  border-left: 4px solid transparent;
+  border-radius:3px;
+  transform-origin:50% 45px;
+} 
+
+.clock_demo >.pointer .minute_hand{
+  position:absolute;
+  top:30px;
+  left:105px;
+  width: 3px;
+  border-bottom: 95px solid #68645C;
+  border-right: 4px solid transparent;  
+  border-left: 4px solid transparent;
+  border-radius:3px;
+  transform-origin:50% 80px;
+  transform:rotate(-70deg);
+  
+}
+
+.clock_demo > .pointer .second_hand{
+  position:absolute;
+  left:50%;
+  top:30px;
+  border:1px solid #E97B65;
+  height:100px; 
+  transform-origin:50% 80px;
+  transform:rotate(70deg)
+}
+
+.clock_demo > .pointer >.dot1{
+  position:absolute;
+  background:#EEEFE7;
+  /* border:2px solid #EEEFE7; */
+  border-radius:50%;
+  width:10px;
+  height:10px;
+  left:106px;
+  top:105px;
+  box-shadow:0 -2px 4px #242323 inset;
+}
+
+/*文字*/
+.clock_demo > .clock_text{
+ 
+  position:absolute;
+  top:250px;
+  left:58px;
+  
+}
