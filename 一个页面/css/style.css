@@ -415,8 +415,12 @@
   border-radius:2px;
 }
 
-.footer_wrapper >.footer>.footer_middle span{
+.footer_wrapper >.footer>.footer_middle a{
   line-height:1.7em;
+}
+
+.footer_wrapper >.footer>.footer_middle a:hover{
+  color:#E9BC72;
 }
 
 .footer_wrapper >.footer>.footer_right{

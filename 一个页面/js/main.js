@@ -25,22 +25,34 @@ $(function () {
     $("html,body").animate({ scrollTop: $("#LearnMore").offset().top }, 500);
   })
 
-  $('.topbar .navigation>a:nth-child(1)').on('click', function () {
-    $("html,body").animate({ scrollTop: $("#home").offset().top }, 500);
+  $('.topbar .navigation>a').eq(0).on('click', function () {
+    $("html,body").animate({ scrollTop: $("#Home").offset().top }, 500);
   })
 
-  $('.topbar .navigation>a:nth-child(6)').on('click', function () {
-    $("html,body").animate({ scrollTop: $("#contact").offset().top }, 500);
-  })
-
-  $('.topbar .navigation>a:nth-child(5)').on('click', function () {
-    $("html,body").animate({ scrollTop: $("#album").offset().top }, 500);
-  })
-
-
-  $('.topbar .navigation>a').slice(1, 4).on('click', function () {
+  $('.topbar .navigation>a').eq(1).on('click', function () {
     $("html,body").animate({ scrollTop: $("#LearnMore").offset().top }, 500);
   })
+
+  $('.topbar .navigation>a').eq(2).on('click', function () {
+    $("html,body").animate({ scrollTop: $("#Introduction_1").offset().top }, 500);
+  })
+
+  $('.topbar .navigation>a').eq(3).on('click', function () {
+    $("html,body").animate({ scrollTop: $("#Introduction_2").offset().top }, 500);
+  })
+
+  $('.topbar .navigation>a').eq(4).on('click', function () {
+    $("html,body").animate({ scrollTop: $("#Album").offset().top }, 500);
+  })
+
+  $('.topbar .navigation>a').eq(5).on('click', function () {
+    $("html,body").animate({ scrollTop: $("#Contact").offset().top }, 500);
+  })
+
+  $('.footer_wrapper >.footer>.footer_middle a').on('click', function () {
+    $("html,body").animate({ scrollTop: $("#Home").offset().top }, 500);
+  })
+
 })
 
 //tab点击
