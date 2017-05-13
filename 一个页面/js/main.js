@@ -70,4 +70,25 @@ $(function () {
   })
 })
 
-// 3D hover
+// 图片占位符
+
+$(function () {
+
+  $(document).ready(function () {
+    let $img_1 = $('.banner >.swiper-container .swiper-slide img')
+    for(var i=1;i<$img_1.length;i++){
+       let $url = $img_1.eq(i).attr('data-src')
+        $img_1.eq(i).attr('src', $url)
+    }  
+  })
+
+
+  $(document).ready(function () {
+    let $img_1 = $('.album >.album_slide >.swiper-container .img_wrapper >img')
+    for(var i=1;i<$img_1.length;i++){
+       let $url = $img_1.eq(i).attr('data-src')
+        $img_1.eq(i).attr('src', $url)
+    }  
+  })
+
+})
