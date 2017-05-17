@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ol {
+        list-style: none;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    #wrapper {
+        width: 1000px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+
+</style>
+
+<ol id="wrapper"></ol>
+<button id="button">加载</button>
+<script>
+    var page = 1
+    button.onclick = function () {
+        var request = new XMLHttpRequest()
+        request.open('GET', './page/page' +page + '.json')
+        request.onload = function () {
+            page += 1
+            let object = JSON.parse(request.responseText)
+            let hasNextPage = object.hasNextPage
+            if(!hasNextPage){
+               button.disabled = true
+            }
+            let array = object.items
+            array.forEach(function (item, index) {
+                let li = document.createElement('li')
+                let img = new Image()
+                wrapper.appendChild(li)
+                li.appendChild(img)
+                img.src = item.url
+            })
+        }
+
+        request.send()
+
+    }
+</script>
+</body>
+
+</html>

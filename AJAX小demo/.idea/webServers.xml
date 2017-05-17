@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="59a33495-cb53-4de3-a1d1-1898df552774" name="local" url="http://169.254.6.10:8080">
+        <fileTransfer port="0" mountedRoot="$APPLICATION_HOME_DIR$/bin/D:\我的坚果云\Demo\AJAX小demo" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
