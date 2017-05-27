@@ -1,0 +1,161 @@
+*{margin:0;box-sizing:border-box;padding:0;font-family:Arial;}
+
+ol,ul,li{list-style:none;}
+.width_wrapper{max-width:1200px;margin:0 auto;}
+
+/*logo模块*/
+.logo{
+    text-align: center;
+    background: white;
+}
+.logo > img{
+    width: 73px;
+    height: 73px;
+    border-radius: 50%;
+    margin-top: 1vw;
+    border:1px solid #4F5354;
+}
+
+.logo > .slogan{
+    margin-top:0.3vw;
+    margin-bottom: 0.3vw;
+}
+
+.logo > .slogan > li{
+    display: inline-block;
+    min-width: 140px;
+    margin: 0.5vw 0;
+}
+
+/*banner模块*/
+
+.banner .swiper-container img{
+    width:100%;
+    border-radius:8px;
+}
+
+@media(min-width:418px){
+    .logo > .slogan > li{
+        min-width:190px;
+    }
+}
+
+@media(min-width:560px){
+    .heros >ol{   
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .heros >ol >li{
+        width:50%;
+    } 
+    .logo > .slogan > li{
+        min-width:136.5px;
+    }
+}
+
+@media(min-width:960px){
+    .heros >ol{   
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .heros >ol >li{
+        width:33.33333%;
+    }
+}
+
+@media(min-width:1200px){
+    .heros >ol{   
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-right: 50px;}
+}
+
+
+/*heros模块*/
+.heros{
+    background:white;
+    margin-top: 30px;
+}
+
+.heros .hero span{
+    color:#8115A7;
+}
+
+.heros .hero .wrapper>li{
+    display:flex;
+    align-items:center;
+}
+
+.heros .hero .wrapper p{
+    padding:0 10px 0 2px;
+    font-size:14px;
+    color:#595959;
+} 
+
+.heros .hero .wrapper img{
+    width:28px;
+    border-radius:50%;
+    background-color:#ff9200;
+    padding:5px;
+    margin:5px 0;
+    z-index:10;
+}
+
+.heros .hero .wrapper .progressBar{
+    width:60%;
+    background:#4f5354;
+    border-radius:5px;
+    height:10px;
+    margin-left:-4px;
+}
+
+.heros .hero .wrapper .barline{
+    width:0;
+    background:#ff9200;
+    border-radius:5px;
+    height:100%;
+}
+
+.heros > ol{
+    list-style:none;
+    padding-left:0;
+}
+
+
+.heros .hero{
+    margin:10px 28px;
+}
+.heros .hero > img{
+    width: 100%;
+    border-radius: 4px;
+    vertical-align: bottom;
+
+}
+
+.heros .hero  span{
+    font-size:15px;
+}
+
+.heros .hero > h3{
+
+    margin-top:20px;
+    margin-bottom: 0;
+    max-width: 204px;
+    border-radius: 4px;
+    line-height: 24px;
+
+}
+.heros .hero > p{
+    margin-top:14px;
+    margin-bottom: 45px;
+    border-bottom: 2px solid #2991f0;
+    min-width: 288px;
+    border-radius: 5px;
+    line-height: 16px;
+    line-height:23px;
+    width:70%;
+}
