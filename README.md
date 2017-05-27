@@ -1,6 +1,6 @@
 # 作品展示
 
-1. [一个简单的响应式页面](https://oneleven.github.io/products/1.一个简单的交互式响应页面/index.html)
+1. [一个简单的响应式页面](https://oneleven.github.io/products/一个简单的交互式响应页面/index.html)
 2. [CSS & JS时钟](https://oneleven.github.io/products/CSS&JS时钟/index.html)
 3. [一个完整的页面](https://oneleven.github.io/products/一个页面/index.html)
 
