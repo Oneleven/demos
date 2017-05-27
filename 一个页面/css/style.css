@@ -7,7 +7,7 @@
   font-family:Microsoft YaHei;
   color:#353535;
 }
-/*15px == 1.25vw (1200px页面宽度基准)*/
+/*15px == 1.25vw (1100px页面宽度基准)*/
 /* 首页 */
 
   /* topbar-logo */
@@ -79,7 +79,7 @@
 }
 
 .banner{
-  width:1200px;
+  width:1100px;
   margin-left:auto;
   margin-right:auto;
 }
@@ -139,7 +139,7 @@
 
 .abstract_wrapper{
   /*border:1px solid purple;*/
-  width:1200px; /*85vw*/
+  width:1100px; /*85vw*/
   margin-left:auto;
   margin-right:auto;
   background-color:#FFFFFF;
@@ -169,7 +169,7 @@
 
 .introduction_1wrapper{
   border:1px solid transparent;
-  width:1200px;
+  width:1100px;
   margin-left:auto;
   margin-right:auto;
   background-color: #F5F5F5;
@@ -226,7 +226,7 @@
 /*introduction_2*/
 .introduction_2wrapper{
   /*border:1px solid purple;*/
-  width:1200px;
+  width:1100px;
   margin-left:auto;
   margin-right:auto;
   background-color: #FFFFFF;
@@ -300,7 +300,7 @@
   /*album*/
 .album_wrapper{
   border:1px solid transparent;
-  width:1200px;
+  width:1100px;
   margin-left:auto;
   margin-right:auto;
   background-color:#373737;
@@ -355,7 +355,7 @@
 /*footer*/
 
 .footer_wrapper{
-  width:1200px;
+  width:1100px;
   height:300px;
   /*border:1px solid midnightblue;*/
   background-color:#FFFFFF;
@@ -366,7 +366,7 @@
 .footer_wrapper >.footer{
   /*border:1px solid red;*/
   height:100%;
-  width:1200px;
+  width:1100px;
   margin-left:auto;
   margin-right:auto;
   display:flex;
@@ -446,7 +446,7 @@
 /*goTop*/
 .goTop_wrapper{
   border:1px solid transparent;
-  width:1200px;
+  width:1100px;
   height:20px;
   margin-left:auto;
   margin-right:auto;
