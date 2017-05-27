@@ -20,40 +20,54 @@ $('#demo5').swiper({
 });
 
 // 页面锚点平滑跳转
-$(function () {
-  $('.banner > .swiper-container .swiper-slide a').on('click', function () {
-    $("html,body").animate({ scrollTop: $("#LearnMore").offset().top }, 500);
-  })
 
-  $('.topbar .navigation>a').eq(0).on('click', function () {
-    $("html,body").animate({ scrollTop: $("#Home").offset().top }, 500);
-  })
-
-  $('.topbar .navigation>a').eq(1).on('click', function () {
-    $("html,body").animate({ scrollTop: $("#LearnMore").offset().top }, 500);
-  })
-
-  $('.topbar .navigation>a').eq(2).on('click', function () {
-    $("html,body").animate({ scrollTop: $("#Introduction_1").offset().top }, 500);
-  })
-
-  $('.topbar .navigation>a').eq(3).on('click', function () {
-    $("html,body").animate({ scrollTop: $("#Introduction_2").offset().top }, 500);
-  })
-
-  $('.topbar .navigation>a').eq(4).on('click', function () {
-    $("html,body").animate({ scrollTop: $("#Album").offset().top }, 500);
-  })
-
-  $('.topbar .navigation>a').eq(5).on('click', function () {
-    $("html,body").animate({ scrollTop: $("#Contact").offset().top }, 500);
-  })
-
-  $('.footer_wrapper >.footer>.footer_middle a').on('click', function () {
-    $("html,body").animate({ scrollTop: $("#Home").offset().top }, 500);
-  })
-
+let a =$('a').not('.footer_wrapper >.footer>.footer_left .icons a')
+a.on('click',function(event){
+  event.preventDefault();
+  let anchor = $.attr(this,'href')
+  let top = $(anchor).offset().top
+  $('body').animate({
+    scrollTop: top
+  },400);
+  
 })
+
+
+
+// $(function () {
+//   $('.banner > .swiper-container .swiper-slide a').on('click', function () {
+//     $("html,body").animate({ scrollTop: $("#LearnMore").offset().top }, 500);
+//   })
+
+//   $('.topbar .navigation>a').eq(0).on('click', function () {
+//     $("html,body").animate({ scrollTop: $("#Home").offset().top }, 500);
+//   })
+
+//   $('.topbar .navigation>a').eq(1).on('click', function () {
+//     $("html,body").animate({ scrollTop: $("#LearnMore").offset().top }, 500);
+//   })
+
+//   $('.topbar .navigation>a').eq(2).on('click', function () {
+//     $("html,body").animate({ scrollTop: $("#Introduction_1").offset().top }, 500);
+//   })
+
+//   $('.topbar .navigation>a').eq(3).on('click', function () {
+//     $("html,body").animate({ scrollTop: $("#Introduction_2").offset().top }, 500);
+//   })
+
+//   $('.topbar .navigation>a').eq(4).on('click', function () {
+//     $("html,body").animate({ scrollTop: $("#Album").offset().top }, 500);
+//   })
+
+//   $('.topbar .navigation>a').eq(5).on('click', function () {
+//     $("html,body").animate({ scrollTop: $("#Contact").offset().top }, 500);
+//   })
+
+//   $('.footer_wrapper >.footer>.footer_middle a').on('click', function () {
+//     $("html,body").animate({ scrollTop: $("#Home").offset().top }, 500);
+//   })
+
+// })
 
 //tab点击
 $(function () {
@@ -92,3 +106,15 @@ $(function () {
   })
 
 })
+
+//一鍵回到頂部
+ $(function(){
+        $(window).scroll(function(){
+            if($(window).scrollTop() > 200){
+                $(".goTop img").fadeIn(1000);//一秒渐入动画
+            }else{
+                $(".goTop img").fadeOut(1000);//一秒渐隐动画
+            }
+        });
+       
+    });
