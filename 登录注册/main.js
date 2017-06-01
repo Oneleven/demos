@@ -15,6 +15,7 @@ $(function () {
 //icon变化
 
 $('.Form input').bind('input propertychange', function (e) {
+
   let $target = $(e.target)
 
   let $value = $target.val()

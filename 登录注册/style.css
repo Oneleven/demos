@@ -43,6 +43,13 @@ body{
     color:#CCCCCC;
     background:transparent;
     margin-top:20px;
+    outline:none;
+}
+
+.wrapper .prompt button:hover{
+    color:#E8716D;
+    border:1px solid #E8716D;
+    padding:4px 12px;
 }
 
 .Form{
@@ -87,14 +94,19 @@ body{
 
 .signUp form >input{
     height:30px;
-    width:110px;
+    width:100px;
     background-color:#E8716D;
     border-radius:4px;
     outline: none;
     border:transparent;
     color:white;
-    margin-left:200px;
+    margin-left:210px;
     margin-top:8px;
+    
+}
+
+.signUp form >input:hover{
+    box-shadow: 0 0 2px 1px #7e8587;
 }
 
 .logIn{
@@ -130,14 +142,18 @@ body{
 
 .logIn form >input{
     height:30px;
-    width:110px;
+    width:100px;
     background-color:#E8716D;
     border-radius:4px;
     outline: none;
     border:transparent;
     color:white;
-    margin-left:200px;
+    margin-left:210px;
     margin-top:-30px;
+}
+
+.logIn form >input:hover{
+   box-shadow: 0 0 2px 1px #7e8587;
 }
 
 /*动画部分*/
