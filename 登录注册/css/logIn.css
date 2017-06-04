@@ -4,6 +4,12 @@
     margin-top:200px;
 }
 
+.logIn div{
+    display:inline;
+    border:1px solid red;
+    position:relative;
+}
+
 .logIn img{
     width:40px;
     height:40px;
@@ -19,6 +25,8 @@
     background:transparent;
     outline:none;
     margin-left:15px;
+    position:absolute;
+    top:20px;
 }
 
 .logIn button:hover{

@@ -27,14 +27,17 @@ body{
 
 .wrapper .prompt .prompt_left{
     margin-right:50px;
+    position: relative;
 }
 
 .wrapper .prompt .prompt_right{
     margin-left:50px;
+    position: relative;
 }
 
 .wrapper .prompt p{
     font-size: 12px;
+    margin-bottom:70px;
 }
 
 .wrapper .prompt button{
@@ -43,8 +46,9 @@ body{
     border:1px solid #CCCCCC;
     color:#CCCCCC;
     background:transparent;
-    margin-top:20px;
+    top:140px;
     outline:none;
+    position:absolute;
 }
 
 .wrapper .prompt button:hover{
