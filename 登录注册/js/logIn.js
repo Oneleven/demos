@@ -8,7 +8,7 @@ console.log(AV)
 
 let currentUser = AV.User.current()
 if (currentUser) {
-    welcome.textContent = "WELCOME，" + currentUser.attributes.username +'!'
+    welcome.textContent = "WELCOME , " + currentUser.attributes.username +'!'
 }
 
 logOut.onclick = () => {
