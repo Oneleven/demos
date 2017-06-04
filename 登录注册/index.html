@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>登录注册</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./node_modules/leancloud-storage/dist/av.js"></script>
 </head>
 
 <body >
@@ -32,19 +33,22 @@
                 <p>SIGN UP</p>
                 <form name="signUp">
                     <div>
-                        <input type="text" name="username" placeholder="Full Name">
+                        <input type="text" name="username" placeholder="User Name">
                         <img src="./img/people.png" class="hidden img_1">
                         <img src="./img/people副本.png" class="img_2">
+                        <span id="error_signUp_username"></span>
                     </div>
                     <div>
                         <input type="email" name="email" placeholder="Email">
                         <img src="./img/email.png" class="hidden img_1">
                         <img src="./img/email副本.png" class="img_2">
+                        <span id="error_signUp_email"></span>
                     </div>
                     <div>
                         <input type="password" name="password" placeholder="Password">
                         <img src="./img/lock.png" class="hidden img_1">
                         <img src="./img/lock副本.png" class="img_2">
+                        <span id="error_signUp_password"></span>
                     </div>
                     <input type="submit" value="SIGN UP">
                 </form>
@@ -53,22 +57,25 @@
                 <p>LOG IN</p>
                 <form name="logIn">
                     <div>
-                        <input type="email" name="email" placeholder="Email">
-                        <img src="./img/email.png" class="hidden img_1">
-                        <img src="./img/email副本.png" class="img_2">
+                        <input type="text" name="username" placeholder="User Name">
+                        <img src="./img/people.png" class="hidden img_1">
+                        <img src="./img/people副本.png" class="img_2">
+                        <span id="error_logIn_username"></span>
                     </div>
                     <div>
                         <input type="password" name="password" placeholder="Password">
                         <img src="./img/lock.png" class="hidden img_1">
                         <img src="./img/lock副本.png" class="img_2">
+                        <span id="error_logIn_password"></span>
                     </div>
                     <input type="submit" value="LOG In">
+                    <!--<button>Forget password?</button>-->
                 </form>
             </div>
         </div>
     </div>
 
-    <script src="./main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
