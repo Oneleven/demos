@@ -1,10 +1,10 @@
 body{
-  background-image:url(./img/background4.jpeg);
   background-attachment: fixed; 
   background-repeat:no-repeat;
   background-position:center;
   background-size: cover;
 }
+
 .wrapper{
    width:900px;
    margin:200px auto ;
