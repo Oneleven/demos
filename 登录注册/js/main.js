@@ -22,9 +22,9 @@ signUpForm.addEventListener('submit', (e) => {
   e.preventDefault()
   let password = signUpForm.password.value
   if(password.length === 0){
-     $('#error_signUp_password').text("密码不能为空！").show().fadeOut(2000)
+     $('#error_signUp_password').text("密码不能为空！").show().fadeOut(1300)
     }else if(password.length <6){
-     $('#error_signUp_password').text("密码不能少于6位！").show().fadeOut(2000)
+     $('#error_signUp_password').text("密码不能少于6位！").show().fadeOut(1300)
      return 
     }
   // 新建 AVUser 对象实例
@@ -42,9 +42,9 @@ signUpForm.addEventListener('submit', (e) => {
   }, function (error) {
     console.log(error)
     if(error.code === 203){
-     $('#error_signUp_email').text("此电子邮箱已被占用！").show().fadeOut(2000) 
+     $('#error_signUp_email').text("此电子邮箱已被占用！").show().fadeOut(1300) 
     }else if(error.code === 202){
-     $('#error_signUp_username').text("此用户名已被注册！").show().fadeOut(2000) 
+     $('#error_signUp_username').text("此用户名已被注册！").show().fadeOut(1300) 
     }
   })
 })
@@ -67,11 +67,11 @@ logInForm.onsubmit = (e) => {
   }, function (error) {
     console.log(error)
     if (error.code === 210) {
-      $('#error_logIn_password').text("密码错误！").show().fadeOut(2000)
+      $('#error_logIn_password').text("密码错误！").show().fadeOut(1300)
     } else if (error.code === 219) {
-      $('#error_logIn_password').text("登录失败次数超过限制，请稍候再试!").show().fadeOut(2000)
+      $('#error_logIn_password').text("登录失败次数超过限制，请稍候再试!").show().fadeOut(1300)
     } else if (error.code === 211) {
-      $('#error_logIn_username').text("用户不存在！").show().fadeOut(2000)
+      $('#error_logIn_username').text("用户不存在！").show().fadeOut(1300)
     }
     console.log('ok')
   });
