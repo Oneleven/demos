@@ -49,6 +49,7 @@ body{
     top:140px;
     outline:none;
     position:absolute;
+    font-size:12px;
 }
 
 .wrapper .prompt button:hover{
@@ -118,7 +119,7 @@ body{
     color:white;
     margin-left:210px;
     margin-top:8px;
-    
+    font-size:12px;
 }
 
 .signUp form >input:hover{
@@ -177,6 +178,7 @@ body{
     color:white;
     margin-left:210px;
     margin-top:-30px;
+    font-size: 12px;
 }
 
 /*.logIn form >button{

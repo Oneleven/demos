@@ -27,12 +27,13 @@
     margin-left:15px;
     position:absolute;
     top:20px;
+    font-size:12px;
 }
 
 .logIn button:hover{
     color:#E8716D;
     border:1px solid #E8716D;
-    padding:3px 7px;
+    padding:3px 9px;
     font-size:13px;
     box-shadow: 0 0 2px 1px #CCCCCC;
 }
