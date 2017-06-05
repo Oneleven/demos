@@ -97,6 +97,7 @@ body{
     top:28px;
     color:red;
     font-size:14px;
+    left:0px;
 }
 
 .signUp div input{
@@ -155,6 +156,7 @@ body{
     top:30px;
     color:red;
     font-size:14px;
+    left:0px;
 }
 
 .logIn div input{
