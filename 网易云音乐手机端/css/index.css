@@ -230,7 +230,7 @@
 /*tab-hotmusic*/
 .banner_hotmusic{
     height:38.9013vw;
-    background-image: url(/img/background_hotmusic.jpg);
+    background-image: url(./img/background_hotmusic.jpg);
     background-size:cover;
     position:relative;
 }
