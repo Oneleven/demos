@@ -1,0 +1,147 @@
+*{box-sizing: border-box; margin:0;padding:0}
+*::before, *::after{box-sizing: border-box}
+
+.page_song{
+    display:flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    height:177.87vw;
+    /*background-image: url(/img/album_cover/background_soundOfSilence.jpg);*/
+    background-size: cover;
+}
+
+.page_song::before{
+    content:'';
+    position:absolute;
+    height:177.87vw;
+    width:100vw;
+    background-color:rgba(0,0,0,.5);
+}
+
+.disc_container{
+    position:relative;
+    /*border:1px solid red;*/
+}
+
+@keyframes rotation {
+    0%{transform:rotate(0deg);}
+    100%{transform: rotate(365deg);}
+}
+
+.disc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:58vw;
+    /*border:1px solid black;*/
+}
+
+.disc_container .disc_play{
+    width:15.3125vw;
+    position:absolute;
+}
+
+.disc_container.playing .disc_play{
+    display:none;
+}
+
+.disc_container .disc_pause{
+    width:15.3125vw;
+    position:absolute;
+    display: none;
+}
+
+.disc_container.playing .disc_pause{
+    display: block;
+}
+
+.disc_container .disc_needle{
+    width:25.6vw;
+    position:absolute;
+    left:44.69vw;
+    top:0;
+}
+
+/*.disc_container.playing .disc_needle{
+    transform: rotate(-)
+}*/
+
+.disc_container .disc_cover{
+    width:49.07vw;
+    position:absolute;
+    animation: rotation 20s linear infinite;
+    animation-play-state: paused;
+}
+
+.disc_container.playing .disc_cover{   
+    animation-play-state: running;
+}
+
+.disc_container .disc_black{
+    width:78.93vw;
+    position:absolute;
+    animation: rotation 20s linear infinite;
+    animation-play-state: paused;
+}
+
+.disc_container.playing .disc_black{   
+    animation-play-state: running;
+}
+
+.song_description{
+    margin-top:39.33vw;
+    color:#AFB0A6;
+    text-align: center;
+    z-index:1;
+    line-height: 6vw;
+    flex-grow: 1;
+}
+
+.song_description h1{
+    font-size:4.8vw;
+    margin-top:8vw;
+    margin-bottom:2vw;
+    color:#FAFAFA;
+}
+
+.song_description .lyric{
+    margin:auto;
+    height: 24.5vw;
+    width:81.33vw;
+    /*border:1px solid red;*/
+    overflow: hidden;
+}
+
+.song_description p{
+    font-size: 3.73vw;
+}
+
+.song_description p.active{
+    color:#FAFAFA;
+}
+
+.footer-wrapper{
+    /*border:1px solid red;*/
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    font-size:4vw;
+}
+
+.footer-wrapper a{
+    text-decoration: none;
+    width:38.93vw;
+    text-align: center;
+    border:1px solid #D43B32;
+    color:#D43B32;
+    background: transparent;
+    line-height: 9.4vw;
+    margin:0 1.875vw 5vw ;
+    border-radius:1.25vw;
+    letter-spacing: 1vw;
+}
+
+.footer-wrapper .download{
+    background-color:#D43B32;
+    color:#FFFFFF;
+}

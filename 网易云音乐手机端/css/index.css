@@ -1,0 +1,327 @@
+*{box-sizing: border-box; margin:0;padding:0 ; list-style: none;}
+*::before, *::after{box-sizing: border-box}
+
+.top_bar{
+    height:17vw;
+    /*border:1px solid black;*/
+    background:#D43C33;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top_bar > a{
+    text-decoration: none;
+    font-size:4vw;
+    line-height: 7.5vw;
+    border:1px solid #FFFFFF;
+    border-radius: 37.5%/100%;
+    color:#FFFFFF;
+    padding:0 2.6vw;
+    margin-right: 2.67vw;
+}
+
+.top_bar > svg{
+    margin-left:2.67vw;
+}
+
+.nav_list{
+    line-height:9vw;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #CCCCCC;
+    font-size:4vw;
+}
+
+.nav_list > ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow:1;
+}
+
+.nav_list li{
+    border-top:4px solid transparent;
+    border-bottom: 2px solid transparent;
+    padding:0 1.3vw;
+}
+
+.nav_list li:nth-child(3){
+    margin-right:11.5vw;
+}
+
+.nav_list li:nth-child(1){
+    margin-left:7.5vw;
+}
+
+.nav_list li.active{
+    color:#D33A31;
+    border-bottom:2px solid #D33A31;
+}
+
+.nav_list li:nth-child(2){
+    margin-right:4vw;
+}
+
+/*推荐歌单*/
+
+.tab_list > li{
+    display: none;
+}
+
+.tab_list >li.active{
+    display: block;
+}
+
+.song_lists > h2{
+    font-size: 4.5vw;
+    font-weight: 400;
+    line-height:4.5vw;
+    margin:6vw 0 4.3vw 0;
+    padding:0 2vw;
+    vertical-align: middle;
+    border-left: 2px solid #D33A31;
+}
+
+.song_lists ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.song_lists ul img{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.song_lists ul li{
+    position: relative;
+    width: calc(33.33333% - 0.533vw);
+}
+
+.song_lists ul li::after{
+    content:"";
+    width:100%;
+    /*border:1px solid red;*/
+    position: absolute;
+    top:0;
+    height: 7.2vw;
+    background-image: linear-gradient(180deg,rgba(0,0,0,.2),transparent);
+}
+
+.song_lists ul p{
+    width: 32.8vw;
+    font-size:3.5vw;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 4.2vw;
+    overflow: hidden;
+    padding: 1.5vw 0.3vw 0 1.5vw;
+}
+
+/*最新音乐*/
+.loading{
+    text-align: center;
+}
+
+.lastest_music > h2{
+    font-size: 4.5vw;
+    font-weight: 400;
+    line-height:4.5vw;
+    margin:6.5vw 0 5.86vw 0;
+    padding:0 2vw;
+    vertical-align: top;
+    border-left: 2px solid #D33A31;
+}
+
+.lastest_music li{
+    border-bottom: 1px solid #E2E2E3;
+    position: relative;
+    margin:1.6vw 0 0 calc(2vw + 2px);
+    padding-bottom: 1.6vw;
+}
+
+.lastest_music li a{
+    text-decoration: none;
+}
+
+.lastest_music li h3{
+    font-size: 4.53vw;
+    font-weight: 400; 
+    line-height: 6.67vw;
+    color:black;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 86vw; 
+}
+
+.lastest_music li h3 > span{
+    color:#888888;
+}
+
+.lastest_music li .singer p{
+    line-height: 4.8vw;
+    font-size: 3.2vw;
+    color:#888888;
+    display: inline-block;
+    width:80vw;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;  
+}
+
+.lastest_music li .singer{
+    display: flex;
+    align-items: center;
+}
+
+.lastest_music li .singer > img{
+    width:3.8vw;
+    margin-right: 1.6vw;
+}
+
+.lastest_music li .play_music{
+    position: absolute;
+    right:2.67vw;
+    bottom:4vw;
+    width:7vw;
+    vertical-align: bottom;
+}
+
+
+/*footer*/
+
+.footer{
+    height:54vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(/img/foot_background.png);
+    background-size: contain;
+}
+
+.footer svg{
+    margin-top: 18.67vw;
+    height:11.74vw;
+}
+
+.footer a{
+    text-decoration: none;
+    font-size: 4.27vw;
+    color: #D33A31;
+    line-height: 10.13vw;
+    border:1px solid #D33A31;
+    border-radius: 10.13vw;
+    margin:2.5vw 9.77vw 1.33vw;
+    padding: 0 12vw;
+}
+
+.footer p{
+    font-size: 3.2vw;
+    transform:scale(0.75);
+    color: #888888;
+    line-height: 4.27vw;
+}
+
+/*tab-hotmusic*/
+.banner_hotmusic{
+    height:38.9013vw;
+    background-image: url(/img/background_hotmusic.jpg);
+    background-size:cover;
+    position:relative;
+}
+
+.banner_hotmusic img{
+    width:37.87vw;
+    left:5.33vw;
+    position:absolute;
+    z-index: 1;
+}
+
+.banner_hotmusic::after{
+    content:"";
+    width:100%;
+    height:100%;
+    /*border:1px solid red;*/
+    background-color: rgba(0,0,0,.2);
+    position: absolute;
+    top:0;
+}
+
+/*hotmusic_list*/
+
+.hot_music li{
+    border-bottom: 1px solid #E2E2E3;
+    position: relative;
+    margin:1.6vw 0 0 calc(2vw + 2px);
+    padding-bottom: 1.6vw;
+}
+
+.hot_music li .music_number{
+    margin-right: calc(2vw + 2px)
+}
+
+.hot_music li a{
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+}
+
+
+.hot_music li h3{
+    font-size: 4.53vw;
+    font-weight: 400; 
+    line-height: 6.67vw;
+    color:black;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 76vw; 
+}
+
+.hot_music li h3 > span{
+    color:#888888;
+}
+
+.hot_music li .singer p{
+    line-height: 4.8vw;
+    font-size: 3.2vw;
+    color:#888888;
+    display: inline-block;
+    width:70vw;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;  
+}
+
+.hot_music li .singer{
+    display: flex;
+    align-items: center;
+}
+
+.hot_music li .singer > img{
+    width:3.8vw;
+    margin-right: 1.6vw;
+}
+
+.hot_music li .play_music{
+    position: absolute;
+    right:2.67vw;
+    bottom:4vw;
+    width:7vw;
+    vertical-align: bottom;
+}
+
+.page2 > p{
+    line-height:14.67vw;
+    text-align: center
+}
+
+.page2 >p a {
+    text-decoration: none;
+    color:#999999;
+}
