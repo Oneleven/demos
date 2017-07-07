@@ -200,7 +200,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(/img/foot_background.png);
+    background: url(http://oqwgy1e36.bkt.clouddn.com/17-7-8/72604256.jpg);
     background-size: contain;
 }
 
@@ -230,7 +230,7 @@
 /*tab-hotmusic*/
 .banner_hotmusic{
     height:38.9013vw;
-    background-image: url(/img/background_hotmusic.jpg);
+    background-image: url(http://oqwgy1e36.bkt.clouddn.com/17-7-8/15548921.jpg);
     background-size:cover;
     position:relative;
 }
