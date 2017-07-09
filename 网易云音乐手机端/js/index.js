@@ -107,6 +107,7 @@ $(function () {
         } else if (index === 2) {
             $.get('./page3.json').then(function (promise) {
                 console.log(promise.content)
+                $('.page3 .loading').remove()
             })
         }
     })

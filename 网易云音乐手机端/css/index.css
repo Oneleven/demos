@@ -238,6 +238,7 @@
 .banner_hotmusic img{
     width:37.87vw;
     left:5.33vw;
+    top:7.467vw;
     position:absolute;
     z-index: 1;
 }
@@ -324,4 +325,60 @@
 .page2 >p a {
     text-decoration: none;
     color:#999999;
+}
+
+/*music_search*/
+.search_wrapper{
+    height:16vw;
+    width:100%;
+    border-bottom: 1px solid #E1E2E3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search_wrapper .music_search{
+    width:94.67vw;
+    height:8vw;
+    border-radius: 8vw;
+    background:#EBECEC;
+    text-align: center;
+    position: relative;
+}
+
+.search_wrapper .music_search input{
+    height:100%;
+    width:78.67vw;
+    outline: none;
+    font-size: 3.734vw;
+    color:#333333;
+}
+
+.search_wrapper .music_search ::-webkit-input-placeholder{
+    color:#C9C9C9;
+}
+
+.search_wrapper .music_search img{
+    width:3.7vw;
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    left:2.133vw;
+}
+
+.hotsearch_wrapper{
+    height:52.533vw;
+    width:100%;
+}
+
+.hotsearch_wrapper p{
+    font-size: 3.2vw;
+    line-height: 3.2vw;
+    color: #666666;
+}
+
+.hotsearch_wrapper .hotsearch_list{
+    padding:4vw 2.67vw 0 2.67vw;
+    height:37.867vw; 
+    width:100%;
 }
