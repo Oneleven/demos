@@ -47,7 +47,7 @@ $(function () {
                     $($li_all[index]).find('.singer').prepend($img)
                 }
             })
-            console.log($li_all)
+            // console.log($li_all)
             $('.lastest_music .loading').remove()
         })
     }, 700)
@@ -81,12 +81,12 @@ $(function () {
                     // 判断是否添加sq标志     
                     let $li_all = $('.hot_musiclist li')
                     music_array.forEach(function (music_object, index) {
-                  
-                        $($li_all[index]).find('.music_number').text(pad(index+1))
-                        if(index<=2){
-                            $($li_all[index]).find('.music_number').css("color","#D33A31")               
-                        }else{
-                            $($li_all[index]).find('.music_number').css("color","#888888")
+
+                        $($li_all[index]).find('.music_number').text(pad(index + 1))
+                        if (index <= 2) {
+                            $($li_all[index]).find('.music_number').css("color", "#D33A31")
+                        } else {
+                            $($li_all[index]).find('.music_number').css("color", "#888888")
                         }
                         if (music_object.sq === 'yes') {
                             let $img = $('<img src="./img/SQ.png" alt="">')
@@ -105,8 +105,54 @@ $(function () {
             }
 
         } else if (index === 2) {
-            $.get('./page3.json').then(function (promise) {
-                console.log(promise.content)
+            $.get('./page3.json').then(function (search_array) {
+                search_array.forEach(function(object){
+                    let music_name = object.name
+                    let music_id = object.id
+                    let $li = `<li><a href="./song.html?id=${music_id}">${music_name}</a></li>`
+                    $('.music_tag').append($li)
+                })
+
+                function search(keyword) {
+                    return search_array.filter((item) => item.name.indexOf(keyword) >= 0)
+                }
+
+                let timer = undefined
+
+                $('#search_song').on('input', function (e) {
+                    $('.part1').addClass('active').siblings().removeClass('active')
+                    let $value = $(e.currentTarget).val().trim()
+                    if ($value.length === 0) {
+                        $('.hotsearch_wrapper .search_list li').remove()
+                        $('.part2').addClass('active').siblings().removeClass('active')
+                    } else {
+                        if (timer) { clearTimeout(timer) }
+                        timer = setTimeout(function () {
+                            timer = undefined
+                            let songName_array = search($value)[0]
+                            if (songName_array) {
+                                let songName = songName_array.name
+                                let songId = songName_array.id
+                                let $li = `
+                     <li>
+                         <img src="./img/search.png" alt="">
+                         <p><a href="./song.html?id=${songId}">${songName}</a></p>
+                     </li>
+                    `
+                                $('.hotsearch_wrapper .search_list').append($li)
+                            } else {
+                                let $li = `
+                     <li> 
+                         <p class="search_result">没有结果</p>
+                     </li>`
+                                $('.hotsearch_wrapper .search_list li').remove()
+                                $('.hotsearch_wrapper .search_list').append($li)
+                            }
+                        }, 500)
+
+                    }
+
+                })
                 $('.page3 .loading').remove()
             })
         }

@@ -352,6 +352,8 @@
     outline: none;
     font-size: 3.734vw;
     color:#333333;
+    border: none;
+    background-color:#EBECEC;
 }
 
 .search_wrapper .music_search ::-webkit-input-placeholder{
@@ -367,8 +369,9 @@
 }
 
 .hotsearch_wrapper{
-    height:52.533vw;
+    height:41.867vw;
     width:100%;
+    padding:4vw 2.67vw 0 2.67vw;
 }
 
 .hotsearch_wrapper p{
@@ -377,8 +380,74 @@
     color: #666666;
 }
 
-.hotsearch_wrapper .hotsearch_list{
-    padding:4vw 2.67vw 0 2.67vw;
-    height:37.867vw; 
+.hotsearch_wrapper .music_tag{
+    margin:2.67vw 0 1.867vw 0;
+    height:100%; 
     width:100%;
+    /*overflow: hidden;*/
+}
+
+.hotsearch_wrapper .search_list li{
+    width:100%;
+    height:12vw;
+    padding-left:2.67vw;
+    display: flex;
+    align-items: center;
+}
+
+.hotsearch_wrapper .search_list img{
+    width:4.5vw;
+}
+
+.hotsearch_wrapper .search_list p{
+    width:100%;
+    height:100%;
+    border-bottom:1px solid #E1E2E3;
+    display: flex;
+    align-items: center;
+    margin-left: 1.867vw;   
+}
+
+.hotsearch_wrapper .search_list .search_result{
+    width:100%;
+    height:100%;
+    border-bottom:1px solid #E1E2E3;
+    margin-left: 1.867vw;   
+    color:#507daf;
+    font-size:4vw;
+}
+
+.hotsearch_wrapper .search_list p a{
+     font-size:4vw;
+     color:#333333;
+     text-decoration: none;
+}
+
+.hotsearch_wrapper .music_tag{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hotsearch_wrapper .music_tag li{
+    line-height: 8.53vw;
+    margin:0 2.133vw 2.133vw 0;
+    border: 1px solid #ECEDF0;
+    border-radius: 8.53vw;
+    height:8.53vw;
+}
+
+.hotsearch_wrapper .music_tag a{
+    text-decoration: none;
+    color:#333333;
+    font-size: 3.74vw;
+    padding:0 3.74vw;
+   
+}
+
+.part1.active{
+    display:none;
+}
+
+.part2.active{
+    display:none;
 }
