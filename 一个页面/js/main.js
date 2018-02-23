@@ -21,53 +21,19 @@ $('#demo5').swiper({
 
 // 页面锚点平滑跳转
 
-let a =$('a').not('.footer_wrapper >.footer>.footer_left .icons a')
-a.on('click',function(event){
-  event.preventDefault();
-  let anchor = $.attr(this,'href')
-  let top = $(anchor).offset().top
-  $('body').animate({
-    scrollTop: top
-  },400);
-  
+$(function(){
+  let a =$('a').not('.footer_wrapper >.footer>.footer_left .icons a')
+  a.on('click',function(event){
+    event.preventDefault();
+    var href = $.attr(this, 'href');
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    }, 500, function () {
+        window.location.hash = href;
+    });
+  }) 
 })
 
-
-
-// $(function () {
-//   $('.banner > .swiper-container .swiper-slide a').on('click', function () {
-//     $("html,body").animate({ scrollTop: $("#LearnMore").offset().top }, 500);
-//   })
-
-//   $('.topbar .navigation>a').eq(0).on('click', function () {
-//     $("html,body").animate({ scrollTop: $("#Home").offset().top }, 500);
-//   })
-
-//   $('.topbar .navigation>a').eq(1).on('click', function () {
-//     $("html,body").animate({ scrollTop: $("#LearnMore").offset().top }, 500);
-//   })
-
-//   $('.topbar .navigation>a').eq(2).on('click', function () {
-//     $("html,body").animate({ scrollTop: $("#Introduction_1").offset().top }, 500);
-//   })
-
-//   $('.topbar .navigation>a').eq(3).on('click', function () {
-//     $("html,body").animate({ scrollTop: $("#Introduction_2").offset().top }, 500);
-//   })
-
-//   $('.topbar .navigation>a').eq(4).on('click', function () {
-//     $("html,body").animate({ scrollTop: $("#Album").offset().top }, 500);
-//   })
-
-//   $('.topbar .navigation>a').eq(5).on('click', function () {
-//     $("html,body").animate({ scrollTop: $("#Contact").offset().top }, 500);
-//   })
-
-//   $('.footer_wrapper >.footer>.footer_middle a').on('click', function () {
-//     $("html,body").animate({ scrollTop: $("#Home").offset().top }, 500);
-//   })
-
-// })
 
 //tab点击
 $(function () {
@@ -85,24 +51,19 @@ $(function () {
 })
 
 // 图片占位符
-
 $(function () {
+  function imgPlaceHolder(selector){
+    for(let i=0;i<selector.length;i++){
+      let $url = selector.eq(i).attr('data-src')
+      selector.eq(i).attr('src', $url)
+   }  
+  }
 
   $(document).ready(function () {
     let $img_1 = $('.banner >.swiper-container .swiper-slide img')
-    for(var i=1;i<$img_1.length;i++){
-       let $url = $img_1.eq(i).attr('data-src')
-        $img_1.eq(i).attr('src', $url)
-    }  
-  })
-
-
-  $(document).ready(function () {
-    let $img_1 = $('.album >.album_slide >.swiper-container .img_wrapper >img')
-    for(var i=1;i<$img_1.length;i++){
-       let $url = $img_1.eq(i).attr('data-src')
-        $img_1.eq(i).attr('src', $url)
-    }  
+    let $img_2 = $('.album >.album_slide >.swiper-container .img_wrapper >img')
+    imgPlaceHolder($img_1)
+    imgPlaceHolder($img_2)
   })
 
 })
@@ -110,10 +71,11 @@ $(function () {
 //一鍵回到頂部
  $(function(){
         $(window).scroll(function(){
+          let $img =  $(".goTop img")
             if($(window).scrollTop() > 200){
-                $(".goTop img").fadeIn(1000);//一秒渐入动画
+              $img.fadeIn(1000);//一秒渐入动画
             }else{
-                $(".goTop img").fadeOut(1000);//一秒渐隐动画
+              $img.fadeOut(500);//一秒渐隐动画
             }
         });
        
