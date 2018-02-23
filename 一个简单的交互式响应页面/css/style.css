@@ -31,6 +31,7 @@ ol,ul,li{list-style:none;}
 
 .banner .swiper-container img{
     width:100%;
+    border-radius:8px;
 }
 
 @media(min-width:418px){

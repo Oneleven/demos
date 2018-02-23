@@ -1,29 +1,23 @@
-function animate() {
-	$(".barline").each(function (i, item) {
-		var a = parseInt($(item).attr("data-width"));
-		$(item).animate({
-			width: a + "%"
-		}, 1000);
-	});
-}
-animate();
-
-$('.heros .hero > img').on('mouseenter',function(e){
-	var $click = $(e.target)
-	var $a = $click.siblings('.wrapper').find('.barline')
-	$a.css("width","0")
-	function animate() {
-	$a.each(function (i, item) {
+function animate(selector) {
+	selector.each(function (i, item) {
 		let a = parseInt($(item).attr("data-width"));
 		$(item).animate({
 			width: a + "%"
 		}, 1000);
 	});
 }
-animate();
+let $barline = $(".barline")
+animate($barline);
+
+$('.heros .hero > img').on('mouseenter',function(e){
+	let $click = $(e.target)
+	let $a = $click.siblings('.wrapper').find('.barline')
+	$a.css("width","0")
+	$a.css("width","0")
+animate($a);
 })
 
-
+// 轮播组件
 jQuery(function ($) {
 	$('#demo21').swiper({
 		pagination: '#demo21 .swiper-pagination',
