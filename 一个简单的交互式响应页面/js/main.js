@@ -25,6 +25,6 @@ jQuery(function ($) {
 		spaceBetween: 30,
 		centeredSlides: true,
 		autoplay: 3000,
-		autoplayDisableOnInteraction: false
+		autoplayDisableOnInteraction:false
 	});
 })
