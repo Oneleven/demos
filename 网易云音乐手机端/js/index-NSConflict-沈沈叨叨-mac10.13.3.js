@@ -136,8 +136,8 @@ $(function () {
 
                                     if(!songName_array){
                                         let $li = `
-                                        <li id="search_result"> 
-                                        <p class="search_result" >没有结果</p>
+                                        <li> 
+                                        <p class="search_result" existed="yes">没有结果</p>
                                         </li>`
                                         $('.hotsearch_wrapper .search_list li').remove()
                                         $('.hotsearch_wrapper .search_list').append($li)
@@ -146,6 +146,7 @@ $(function () {
                                        let songName = songName_array.name
                                        let songId = songName_array.id
                                        if ($('.searched_song').attr("existed") === "yes" ) {
+         
                                         return
                                     }else{
                                         let $li = `
@@ -154,9 +155,7 @@ $(function () {
                                         <p><a href="./song.html?id=${songId}" existed="yes" class="searched_song">${songName}</a></p>
                                         </li>
                                         `
-                                        $('#search_result').remove()
                                         $('.hotsearch_wrapper .search_list').append($li)
-                                        
                                     }
                                     
                                 }
